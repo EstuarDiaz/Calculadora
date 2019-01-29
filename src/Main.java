@@ -27,6 +27,7 @@ public class Main {
 	        }
         	stack.push(String.valueOf(awnser));
         }
+        // Imprimir el resultado
         System.out.println("Respuesta: "+stack.pop());
         input.close();
 	}

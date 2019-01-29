@@ -5,42 +5,46 @@ public class Pila<E>
 {
 	protected ArrayList<E> data;
 
-	public Pila()
-	// post: constructs a new, empty stack
-	{
+	public Pila(){
 		data = new ArrayList<E>();
 	}
-
-	public void push(E item)
-	// post: the value is added to the stack
-	//          will be popped next if no intervening push
-	{
+	/**
+	* Agregar un elemento en la pila
+	* @param item E - Elemento que se agrega en la pila
+	*/
+	public void push(E item){
 		data.add(item);
 	}
-
-	public E pop()
-	// pre: stack is not empty
-	// post: most recently pushed item is removed and returned
-	{
+	
+	/**
+    * Obtener el ultimo elemento de la pila y borrarlo de la pila
+    * @return - El ultimo elemento de la pila
+    */
+	public E pop(){
 		return data.remove(size()-1);
 	}
 
-	public E peek()
-	// pre: stack is not empty
-	// post: top value (next to be popped) is returned
-	{
+	/**
+    * Obtener el ultimo elemento de la pila sin sacarlo
+    * @return - El ultimo elemento de la pila
+    */
+	public E peek(){
 		return data.get(size() - 1);
 	}
 	
-	public int size()
-	// post: returns the number of elements in the stack
-	{
-		return data.size();
+	/**
+    * Devuelve el estado de la pila, si esta vacia o no
+    * @return Boolean - True si y solo si el stack esta vacio
+    */
+	public boolean empty(){
+		return size() == 0;
 	}
   
-	public boolean empty()
-	// post: returns true if and only if the stack is empty
-	{
-		return size() == 0;
+	/**
+    * Devuelve el tamanio de la pila
+    * @return int - El numero de elementos de la pila
+    */
+	public int size(){
+		return data.size();
 	}
 }

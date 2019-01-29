@@ -1,3 +1,6 @@
+/**
+ * Clase para las operaciones de la calculadora.
+ */
 
 public class Calculadora 
 	implements iCalculadora{
