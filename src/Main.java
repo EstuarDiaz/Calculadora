@@ -6,7 +6,12 @@ public class Main {
 		Scanner input = new Scanner(System.in);
 		// Obtener el texto postfix
 		System.out.println("Por favor ingrese el texto");
-        String[] texto = input.nextLine().split(" ");
+		//obtiene el arcivo contenedor del Postix
+      	String nomb = input.nextLine();
+        FileReader fr = new FileReader(nomb);
+        BufferedReader br = new BufferedReader (fr);
+        String r = br.readLine();
+        String[] texto = r.split(" ");
         // Guardar el texto en el stack
         for (int i = texto.length-1; i >= 0; i--) {
             stack.push(texto[i]);
