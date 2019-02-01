@@ -17,7 +17,8 @@ public class Main {
             stack.push(texto[i]);
          }
         // Operar el stack con la calculadora
-        while(stack.size() >= 3) {
+        try{
+		while(stack.size() >= 3) {
         	double a = Double.parseDouble(stack.pop());
         	double b = Double.parseDouble(stack.pop());
         	double awnser = 0;
@@ -34,6 +35,9 @@ public class Main {
         }
         // Imprimir el resultado
         System.out.println("Respuesta: "+stack.pop());
+        }catch(Exception e){
+            System.out.println("Hubo un error en su texto");
+        }
         input.close();
 	}
 }
